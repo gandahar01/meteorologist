@@ -12,7 +12,7 @@ class GeocodingController < ApplicationController
     @gapi = "https://maps.googleapis.com/maps/api/geocode/json?address="+@url
     @parsed_data = JSON.parse(open(@gapi).read)
     # ==========================================================================
-    # Your code goes below.
+    # Your code goes below. Test2
     #
     # The street address that the user typed is in the variable @street_address.
     # ==========================================================================
