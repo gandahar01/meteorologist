@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
+gem 'chronic'
+gem 'descriptive_statistics'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.1'
