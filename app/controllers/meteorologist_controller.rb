@@ -17,7 +17,7 @@ class MeteorologistController < ApplicationController
     @parsed_data2 = JSON.parse(open(@gapi2).read)
     
     # ==========================================================================
-    # Your code goes below.
+    # Your code goes below2. 
     #
     # The street address that the user typed is in the variable @street_address.
     # ==========================================================================
