@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'momentjs-rails'
-gem 'bootstrap3-datetimepicker-rails'
-gem 'chronic'
-gem 'descriptive_statistics'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.1'
 # Use sqlite3 as the database for Active Record
@@ -35,7 +30,7 @@ gem "turbolinks"
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem "grade_runner", github: "firstdraft/grade_runner"
+  gem "grade_runner", github: "firstdraft/grade_runner", ref: "881cce30367bc9a5f15a3e4ac4cb48599dbecec2"
   gem "web_git", github: "firstdraft/web_git"
   gem "dotenv-rails"
 end

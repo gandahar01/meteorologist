@@ -9,6 +9,8 @@ class ForecastController < ApplicationController
   def coords_to_weather
     @lat = params[:user_latitude]
     @lng = params[:user_longitude]
+    @gapi2 = "https://api.darksky.net/forecast/54505bbcb6ad201058bc5c29dbffecbc/"+@lat+','+@lng
+    @parsed_data2 = JSON.parse(open(@gapi2).read)
 
     # ==========================================================================
     # Your code goes below.
@@ -18,15 +20,15 @@ class ForecastController < ApplicationController
 
 
 
-    @current_temperature = "Replace this string with your answer."
+    @current_temperature = @parsed_data2["currently"]["temperature"]
 
-    @current_summary = "Replace this string with your answer."
+    @current_summary = @parsed_data2["currently"]["summary"]
 
-    @summary_of_next_sixty_minutes = "Replace this string with your answer."
+    @summary_of_next_sixty_minutes = @parsed_data2["minutely"]["summary"]
 
-    @summary_of_next_several_hours = "Replace this string with your answer."
+    @summary_of_next_several_hours = @parsed_data2["hourly"]["summary"]
 
-    @summary_of_next_several_days = "Replace this string with your answer."
+    @summary_of_next_several_days = @parsed_data2["daily"]["summary"]
 
     render("forecast/coords_to_weather.html.erb")
   end
